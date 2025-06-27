@@ -1,0 +1,31 @@
+.env-socials-link-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.65rem;
+
+    .env-socials-icons-container {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+
+        .socials-icon {
+            background-position: center;
+            background-repeat: no-repeat;
+
+            &.instagram {
+                width: 2rem;
+                height: 2rem;
+                background-image: url('../../../assets/icons/instagram-brands-solid.svg')
+            }
+
+            &.x {
+                width: 2rem;
+                height: 2rem;
+                background-image: url('../../../assets/icons/X_logo_2023.svg');
+            }
+        }
+    }
+}
