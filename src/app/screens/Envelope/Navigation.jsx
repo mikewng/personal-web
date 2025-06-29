@@ -1,8 +1,9 @@
 import Socials from "./SectionComponents/Socials";
+import "./Navigation.scss"
 
-const Navigation = () => {
+const Navigation = ({isSubNav}) => {
     return (
-        <div className="env-nav-container">
+        <div className={"env-nav-container " + (isSubNav ? "sub-nav" : "main-nav")}>
             <div className="env-imageicon-container">
             </div>
             <h1 className="env-header">Cecila</h1>

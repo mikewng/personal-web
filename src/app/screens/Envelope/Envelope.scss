@@ -27,36 +27,4 @@
         width: 100%;
     }
 
-    .env-nav-container {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        top: 15%;
-
-        
-        .env-header {
-            padding-top: 2rem;
-        }
-
-        .env-imageicon-container {
-            top: 15%;
-
-            border: 1px solid black;
-            padding: 4rem;
-            border-radius: 1.5rem;
-
-            background-color: white;
-        }
-
-        .env-link-container {
-            padding: 0.5rem;
-            font-size: 1.2rem;
-
-        }
-    }
-
-
 }

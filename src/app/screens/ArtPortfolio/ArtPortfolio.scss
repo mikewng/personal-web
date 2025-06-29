@@ -1,0 +1,9 @@
+.art-gallery-container {
+    padding: 2rem;
+    display: grid;
+    flex-direction: row;
+    gap: 1rem;
+
+    max-width: 10rem;
+    max-height: 20rem;
+}

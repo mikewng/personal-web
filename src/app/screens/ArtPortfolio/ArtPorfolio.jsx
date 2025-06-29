@@ -1,6 +1,17 @@
+import ImageGalleryComponent from "./ImageComponent/ImageGalleryComponent";
+import "./ArtPortfolio.scss"
+
 const ArtPortfolio = () => {
     return (
-        <div className="art-container">
+        <div className="art-gallery-container">
+
+            <ImageGalleryComponent />
+            <ImageGalleryComponent />
+            <ImageGalleryComponent />
+            <ImageGalleryComponent />
+            <ImageGalleryComponent />
+            <ImageGalleryComponent />
+            <ImageGalleryComponent />
 
         </div>
     )
