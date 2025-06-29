@@ -1,9 +1,9 @@
 import "./ImageGalleryComponent.scss"
 
-const ImageGalleryComponent = ({}) => {
+const ImageGalleryComponent = ({imageSource}) => {
     return (
         <div className="img-content-container">
-            content
+            <img className="img-content-image" src={imageSource?.src} />
         </div>
     )
 }

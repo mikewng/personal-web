@@ -7,31 +7,33 @@ import Navigation from "./Navigation";
 
 const Envelope = ({ children }) => {
 
-    const [navState, setNavState] = useState(true)
+    const [navState, setNavState] = useState(false)
 
     return (
-        <div className="env-container">
+        <div className={"env-container " + (navState ? "expand" : "")}>
             <div className="env-header-container" style={{height: "10rem"}}>
-                <div className="env-header-screen-title">
-                    Title
-                </div>
                 <Navigation isSubNav={navState}/>
-
             </div>
             <div className="divider" />
-            <ArtPortfolio />
+            {
+                navState && 
+                <div className="env-body-container">
+                    <ArtPortfolio />
+                </div>
+            }
 
-            {/* <button 
-            onClick={() => setNavState(!navState)} 
-            style={
-                {
-                    padding: "4rem",
+            <button 
+                style={{
+                    padding: "1rem",
                     position: "absolute",
                     bottom: 0
-                }
-            }
-            >Click</button> */}
-            {/* {children} */}
+                }}
+                onClick={() => {
+                    setNavState(!navState)
+                }}
+            >
+                Click
+            </button>
         </div>
     )
 }

@@ -7,7 +7,18 @@
     gap: 0.5rem;
 
     height: 40rem;
-    width: 65rem;
+    width: 30rem;
+    transition: 0.75s;
+
+    &.expand {
+        width: 97vw;
+        height: 95vh;
+
+        .env-header-container {
+            min-height: 5rem;
+            max-height: 5rem;
+        }
+    }
 
     border: 1px solid black;
     border-radius: 0.75rem;
@@ -25,6 +36,12 @@
     .divider {
         border-top: 1px solid black;
         width: 100%;
+    }
+
+    .env-body-container {
+        display: flex;
+        width: 100%;
+        height: 100%;
     }
 
 }

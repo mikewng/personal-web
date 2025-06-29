@@ -7,6 +7,7 @@ const Navigation = ({isSubNav}) => {
             <div className="env-imageicon-container">
             </div>
             <h1 className="env-header">Cecila</h1>
+            <div className="env-link-container email">cecilaart@gmail.com</div>
             <div className="env-link-container portfolio">
                 Art Portfolio
             </div>
