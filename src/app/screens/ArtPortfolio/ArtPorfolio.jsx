@@ -17,10 +17,9 @@ const ArtPortfolio = () => {
             <ImageGalleryComponent imageSource={img2}/>
             <ImageGalleryComponent imageSource={img2}/>
             <ImageGalleryComponent imageSource={img}/>
-            <ImageGalleryComponent />
-            <ImageGalleryComponent />
-            <ImageGalleryComponent />
-            <ImageGalleryComponent />
+            <ImageGalleryComponent imageSource={img}/>
+            <ImageGalleryComponent imageSource={img}/>
+            <ImageGalleryComponent imageSource={img}/>
         </div>
     )
 }
