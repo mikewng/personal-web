@@ -4,36 +4,22 @@ import { useState } from "react";
 import ArtPortfolio from "../ArtPortfolio/ArtPorfolio";
 import "./Envelope.scss"
 import Navigation from "./Navigation";
+import { useNavigationContext } from "../../context/useNavigationContext";
+import { navMapping } from "../../utils/navigationUtils";
 
 const Envelope = ({ children }) => {
 
-    const [navState, setNavState] = useState(false)
+    const { navState } = useNavigationContext();
 
     return (
-        <div className={"env-container " + (navState ? "expand" : "")}>
-            <div className="env-header-container" style={{height: "10rem"}}>
-                <Navigation isSubNav={navState}/>
+        <div className={"env-container " + (navState !== "Home" ? "expand" : "")}>
+            <div className="env-header-container" style={{ height: "10rem" }}>
+                <Navigation />
             </div>
-            <div className="divider" />
-            {
-                navState && 
-                <div className="env-body-container">
-                    <ArtPortfolio />
-                </div>
-            }
-
-            <button 
-                style={{
-                    padding: "1rem",
-                    position: "absolute",
-                    bottom: 0
-                }}
-                onClick={() => {
-                    setNavState(!navState)
-                }}
-            >
-                Click
-            </button>
+            {/* <div className="divider" /> */}
+            <div className={"env-body-container" + (navState !== "Home" ? "" : " empty")}>
+                {navMapping[navState]}
+            </div>
         </div>
     )
 }

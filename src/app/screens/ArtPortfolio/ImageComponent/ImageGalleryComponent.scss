@@ -1,8 +1,10 @@
 .img-content-container {
-    border: 1px solid black;
-    break-inside: avoid; /* Keep images together */
+    border: 3px solid black;
+    break-inside: avoid; 
     margin-bottom: 0.5rem;
     max-width: 100%;
+
+    border-radius: 0.25rem;
 
     .img-content-image {
         display: block;
