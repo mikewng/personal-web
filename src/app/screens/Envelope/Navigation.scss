@@ -1,16 +1,38 @@
+.env-nav-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .env-header-container {
+        .env-header {
+            font-size: 3rem;
+        }
+    }
+
+    .env-all-links-container {
+        display: flex;
+        gap: 0.5rem;
+
+        .env-link-container {
+            padding: 1rem;
+            font-size: 1.2rem;
+            border-radius: 0.5rem;
+            white-space: nowrap;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
 .env-nav-container.main-nav {
     position: absolute;
-    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 
     top: 15%;
 
-    .env-header {
-        padding-top: 0.5rem;
-        font-size: 3rem;
-    }
 
     .env-imageicon-container {
         top: 15%;
@@ -31,19 +53,33 @@
         transition: 0.75s;
     }
 
-    .env-link-container {
-        padding: 0.5rem;
-        font-size: 1.2rem;
+    .env-all-links-container {
+        flex-direction: column;
 
+        .env-link-container {
+            border: 1px solid black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
+
 }
 
 .env-nav-container.sub-nav {
-    display: flex;
     justify-content: start;
-    align-items: center;
-    gap: 1rem;
-    transition: 0.75s;
+    transition: 0.25s;
+
+    .env-header-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .env-header {
+            font-size: 2rem;
+        }
+    }
 
     .env-imageicon-container {
         top: 15%;
@@ -58,6 +94,17 @@
         background-image: url('../../assets/picturelogos/pfp7.png');
         background-size: 100% 100%;
 
+    }
+
+    .env-all-links-container {
+        flex-direction: row;
+        align-items: center;
+
+        .env-link-container {
+            &:hover {
+                color: rgb(95, 74, 74);
+            }
+        }
     }
 
 }
