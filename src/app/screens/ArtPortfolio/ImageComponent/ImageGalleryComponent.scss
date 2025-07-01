@@ -12,6 +12,16 @@
         height: auto;
         object-fit: cover;
     }
+
+    &:hover {
+        height: fit-content;
+        cursor: pointer;
+
+        .img-content-image {
+            opacity: 80%;
+            transition: 1s;
+        }
+    }
 }
 
 @keyframes fadeIn {
