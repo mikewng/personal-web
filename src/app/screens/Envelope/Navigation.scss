@@ -49,8 +49,6 @@
         background-image: url('../../assets/picturelogos/pfp7.png');
 
         background-size: 100% 100%;
-
-        transition: 0.75s;
     }
 
     .env-all-links-container {
@@ -69,7 +67,6 @@
 
 .env-nav-container.sub-nav {
     justify-content: start;
-    transition: 0.25s;
 
     .env-header-container {
         display: flex;
