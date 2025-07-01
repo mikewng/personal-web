@@ -1,25 +1,31 @@
+'use client'
+
+import { useEffect, useRef, useState } from "react";
+
 import ImageGalleryComponent from "./ImageComponent/ImageGalleryComponent";
 import "./ArtPortfolio.scss"
 
-import img from "../../assets/gallery-imgs/a_1_23_25.png"
-import img2 from "../../assets/gallery-imgs/a_7_1_22_1.png"
-import img3 from "../../assets/gallery-imgs/a_10_17_24_1.png"
+import { imgTestArray } from "../../utils/imageLib";
+
 
 const ArtPortfolio = () => {
+    const loaderRef = useRef();
+
+    console.log("what is imgtest", imgTestArray)
+
+    useEffect(() => {
+
+    }, [])
+
     return (
         <div className="art-gallery-container">
-            <ImageGalleryComponent imageSource={img}/>
-            <ImageGalleryComponent imageSource={img2}/>
-            <ImageGalleryComponent imageSource={img3}/>
-            <ImageGalleryComponent imageSource={img3}/>
-            <ImageGalleryComponent imageSource={img3}/>
-            <ImageGalleryComponent imageSource={img3}/>
-            <ImageGalleryComponent imageSource={img2}/>
-            <ImageGalleryComponent imageSource={img2}/>
-            <ImageGalleryComponent imageSource={img}/>
-            <ImageGalleryComponent imageSource={img}/>
-            <ImageGalleryComponent imageSource={img}/>
-            <ImageGalleryComponent imageSource={img}/>
+            {
+                imgTestArray.map((img, i) => {
+                    return (
+                        <ImageGalleryComponent imageSource={img} key={i}/>
+                    )
+                })
+            }
         </div>
     )
 }

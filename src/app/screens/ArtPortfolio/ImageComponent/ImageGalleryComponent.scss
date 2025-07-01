@@ -1,6 +1,5 @@
 .img-content-container {
-    border: 3px solid black;
-    break-inside: avoid; 
+    break-inside: avoid;
     margin-bottom: 0.5rem;
     max-width: 100%;
 
@@ -16,11 +15,17 @@
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
+    0% {
+        opacity: 0;
+    }
 
-  }
-  100% {
-    opacity: 1;
-  }
+    20% {
+        opacity: 0.20;
+        border: 3px solid black;
+    }
+
+    100% {
+        opacity: 1;
+        border: 3px solid black;
+    }
 }

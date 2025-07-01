@@ -1,14 +1,12 @@
 'use client'
 
 import { useState } from "react";
-import ArtPortfolio from "../ArtPortfolio/ArtPorfolio";
 import "./Envelope.scss"
 import Navigation from "./Navigation";
 import { useNavigationContext } from "../../context/useNavigationContext";
 import { navMapping } from "../../utils/navigationUtils";
 
 const Envelope = ({ children }) => {
-
     const { navState } = useNavigationContext();
 
     return (
@@ -16,7 +14,6 @@ const Envelope = ({ children }) => {
             <div className="env-header-container" style={{ height: "10rem" }}>
                 <Navigation />
             </div>
-            {/* <div className="divider" /> */}
             <div className={"env-body-container" + (navState !== "Home" ? "" : " empty")}>
                 {navMapping[navState]}
             </div>
