@@ -6,6 +6,13 @@
     .env-header-text-container {
         .env-header {
             font-size: 3rem;
+            // white-space: nowrap;
+
+            &:hover {
+                cursor: pointer;
+                color: rgb(212, 190, 190);
+                transition: 1s;
+            }
         }
     }
 
