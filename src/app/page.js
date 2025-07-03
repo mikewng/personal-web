@@ -6,9 +6,9 @@ import "../App.scss"
 export default function Home() {
   return (
     <NavigationProvider>
-      <div className="web-core-screen-container">
+      {/* <div className="web-core-screen-container"> */}
         <Envelope />
-      </div>
+      {/* </div> */}
     </NavigationProvider>
   );
 }

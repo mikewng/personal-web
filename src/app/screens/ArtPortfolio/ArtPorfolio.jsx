@@ -13,11 +13,21 @@ const ArtPortfolio = () => {
     const loaderRef = useRef();
     const [page, setPage] = useState(0);
 
+    const [isLoadingPictures, setIsLoadingPictures] = useState(true)
+
     const batchSize = 4;
 
     useEffect(() => {
         setItems(imgTestArray.slice(0, batchSize));
     }, [])
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsLoadingPictures(false)
+        }, 700);
+
+        return () => clearTimeout(timer);
+    }, []);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -54,11 +64,14 @@ const ArtPortfolio = () => {
     return (
         <div className="art-gallery-container">
             {
-                imgTestArray.map((img, i) => {
+                !isLoadingPictures ? imgTestArray.map((img, i) => {
                     return (
                         <ImageGalleryComponent imageSource={img} key={i} />
                     )
-                })
+                }) :
+                    <div className="art-gallery-loading-container">
+                        <div className="art-gallery-loading-content">Loading</div>
+                    </div>
             }
         </div>
     )

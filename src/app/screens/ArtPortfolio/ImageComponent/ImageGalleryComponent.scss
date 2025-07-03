@@ -15,11 +15,12 @@
 
     &:hover {
         height: fit-content;
+        background-color: black;
         cursor: pointer;
 
         .img-content-image {
             opacity: 80%;
-            transition: 1s;
+            transition: 0.5s;
         }
     }
 }

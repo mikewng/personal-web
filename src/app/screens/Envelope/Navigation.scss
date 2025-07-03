@@ -3,7 +3,7 @@
     align-items: center;
     gap: 1rem;
 
-    .env-header-container {
+    .env-header-text-container {
         .env-header {
             font-size: 3rem;
         }
@@ -56,12 +56,18 @@
         gap: 1rem;
 
         .env-link-container {
-            border: 1px solid black;
             padding: 1rem 4rem 1rem 4rem;
+            background-color: rgb(231, 229, 229);
 
             display: flex;
             justify-content: center;
             align-items: center;
+
+            &:hover {
+                color: rgb(161, 138, 138);
+                background-color: rgb(189, 183, 182);
+                transition: 0.3s;
+            }
         }
     }
 
@@ -70,10 +76,11 @@
 .env-nav-container.sub-nav {
     justify-content: start;
 
-    .env-header-container {
+    .env-header-text-container {
         display: flex;
         flex-direction: column;
         align-items: center;
+
 
         .env-header {
             font-size: 2rem;
@@ -84,7 +91,7 @@
         top: 15%;
         border: 1px solid black;
         padding: 2rem;
-        border-radius: 1.5rem;
+        border-radius: 1rem;
 
         background-color: white;
 

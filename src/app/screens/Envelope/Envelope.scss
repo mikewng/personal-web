@@ -9,19 +9,27 @@
     width: 30rem;
     transition: 0.35s;
 
+    background-color: rgb(114, 85, 104);
+    margin-top: 5rem;
+
     &.expand {
         width: 97vw;
         height: 95vh;
+        margin-top: 0rem;
+
 
         .env-header-container {
             min-height: 5rem;
             max-height: 5rem;
-            border-bottom: 1px solid black;
+            border-bottom: 2px solid black;
+            background-color: rgb(159, 140, 153);
+            border-radius: 0.35rem 0.35rem 0rem 0rem;
+
         }
     }
 
-    border: 1px solid black;
-    border-radius: 0.75rem;
+    border: 2px solid black;
+    border-radius: 0.5rem;
 
     .env-header-container {
         min-height: 5rem;

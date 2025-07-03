@@ -9,7 +9,7 @@ const Navigation = () => {
     return (
         <div className={"env-nav-container " + (navState !== "Home" ? "sub-nav" : "main-nav")}>
             <div className="env-imageicon-container" onClick={() => { setNavState("Home") }} />
-            <div className="env-header-container">
+            <div className="env-header-text-container">
                 <div className="env-header">Cecila</div>
                 {
                     navState === "Home" &&
