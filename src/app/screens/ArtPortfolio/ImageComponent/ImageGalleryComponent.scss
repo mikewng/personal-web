@@ -23,7 +23,16 @@
             transition: 0.5s;
         }
     }
+
+    &.loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8rem 4rem 8rem 4rem;
+    }
 }
+
+
 
 @keyframes fadeIn {
     0% {

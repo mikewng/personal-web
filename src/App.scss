@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --background-color: rgb(228, 185, 201);
+    --body-color: rgb(114, 85, 104);
+    --border-color: rgb(0, 0, 0);
+    --hover-color: rgb(212, 190, 190);
+}
+
+
 body {
     display: flex;
     justify-content: center;

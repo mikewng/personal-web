@@ -1,25 +1,22 @@
 'use client'
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 
-import ImageGalleryComponent from "./ImageComponent/ImageGalleryComponent";
+// import ImageGalleryComponent from "./ImageComponent/ImageGalleryComponent";
 import "./ArtPortfolio.scss"
+import "./ImageComponent/ImageGalleryComponent.scss"
 
 import { imgTestArray } from "../../utils/imageLib";
 
+const ImageGalleryComponent = lazy(() => import("./ImageComponent/ImageGalleryComponent"))
+
 
 const ArtPortfolio = () => {
-    const [items, setItems] = useState([])
-    const loaderRef = useRef();
-    const [page, setPage] = useState(0);
 
     const [isLoadingPictures, setIsLoadingPictures] = useState(true)
+    
 
-    const batchSize = 4;
-
-    useEffect(() => {
-        setItems(imgTestArray.slice(0, batchSize));
-    }, [])
+    // Add isPinned field to Pictures
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -29,37 +26,6 @@ const ArtPortfolio = () => {
         return () => clearTimeout(timer);
     }, []);
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            entries => {
-                if (entries[0].isIntersecting) {
-                    setPage(prev => prev + 1);
-                }
-            },
-            { threshold: 1 }
-        );
-
-        if (loaderRef.current) {
-            observer.observe(loaderRef.current);
-        }
-
-        return () => {
-            if (loaderRef.current) {
-                observer.unobserve(loaderRef.current);
-            }
-        };
-    }, []);
-
-    useEffect(() => {
-        if (page === 0) return; // skip initial load
-        const nextBatch = imgTestArray.slice(
-            page * batchSize,
-            (page + 1) * batchSize
-        );
-        if (nextBatch.length > 0) {
-            setItems(prev => [...prev, ...nextBatch]);
-        }
-    }, [page]);
 
     return (
         <div className="art-gallery-container">
@@ -70,9 +36,28 @@ const ArtPortfolio = () => {
                     )
                 }) :
                     <div className="art-gallery-loading-container">
-                        <div className="art-gallery-loading-content">Loading</div>
+                        <div className="art-gallery-loading-content">Loading...</div>
                     </div>
             }
+            
+            {/* {
+                imgTestArray.map((img, i) => {
+                    return (
+                        <Suspense 
+                            fallback={
+                                <div 
+                                    className="img-content-container loading" 
+                                >
+                                    Loading...
+                                </div>
+                            } 
+                            key={i}
+                        >
+                            <ImageGalleryComponent imageSource={img}  />
+                        </Suspense>
+                    )
+                })
+            } */}
         </div>
     )
 }

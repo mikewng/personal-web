@@ -1,12 +1,11 @@
 'use client'
 
-import { useState } from "react";
 import "./Envelope.scss"
 import Navigation from "./Navigation";
 import { useNavigationContext } from "../../context/useNavigationContext";
 import { navMapping } from "../../utils/navigationUtils";
 
-const Envelope = ({ children }) => {
+const Envelope = () => {
     const { navState } = useNavigationContext();
 
     return (
