@@ -15,7 +15,7 @@
 
     &:hover {
         height: fit-content;
-        background-color: black;
+        background-color: var(--border-color);
         cursor: pointer;
 
         .img-content-image {
@@ -41,11 +41,11 @@
 
     20% {
         opacity: 0.20;
-        border: 3px solid black;
+        border: 2px solid var(--border-color);
     }
 
     100% {
         opacity: 1;
-        border: 3px solid black;
+        border: 2px solid var(--border-color);
     }
 }

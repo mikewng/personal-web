@@ -3,7 +3,7 @@
 :root {
     --background-color: rgb(228, 185, 201);
     --body-color: rgb(114, 85, 104);
-    --border-color: rgb(0, 0, 0);
+    --border-color: rgb(114, 105, 102);
     --hover-color: rgb(212, 190, 190);
 }
 
@@ -11,13 +11,16 @@
 body {
     display: flex;
     justify-content: center;
-    background-color: rgb(228, 185, 201);
+    background: linear-gradient(rgb(230, 230, 230), rgb(228, 185, 201));
+    height: 100vh;
+    overflow-y: hidden;
+
+    // background-color: var(--background-color);
 
     font-family: 'Raleway', sans-serif;
 
 }
 
 .web-core-screen-container {
-    background-color: rgb(114, 85, 104);
     border-radius: 0.80rem;
 }

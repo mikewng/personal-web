@@ -9,6 +9,9 @@ import outis from "../assets/gallery-imgs/outis.png"
 import o3 from "../assets/gallery-imgs/a_9_25_24.png"
 import cap from "../assets/gallery-imgs/cap.png"
 import miku from "../assets/gallery-imgs/miku.png"
+import stilllife from "../assets/gallery-imgs/stilllife_1.png"
+import milia from "../assets/gallery-imgs/22_9_10.png"
+import p from "../assets/gallery-imgs/24_8_24.png"
 
 export const imgTestArray = [
     hutao,
@@ -21,7 +24,10 @@ export const imgTestArray = [
     outis,
     o3,
     cap,
-    miku
+    miku,
+    stilllife,
+    milia,
+    p
 ]
 
 // export const imgTestArray = [
