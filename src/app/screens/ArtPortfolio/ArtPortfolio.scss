@@ -10,11 +10,14 @@
 
     .img-content-container {
         margin-bottom: 1rem;
+        min-height: 4rem;
 
         .img-content-image {
             width: 100%;
             display: block;
             height: auto;
+            
+            border-radius: 0.15rem;
         }
     }
 
