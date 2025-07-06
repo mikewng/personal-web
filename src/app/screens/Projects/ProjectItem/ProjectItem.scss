@@ -1,0 +1,16 @@
+.project-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // padding: 3rem;
+    gap: 1rem;
+
+    border: 2px solid var(--border-color);
+    border-radius: 0.25rem;
+
+    .project-item-img {
+        width: 4rem;
+        height: 4rem;
+    }
+}

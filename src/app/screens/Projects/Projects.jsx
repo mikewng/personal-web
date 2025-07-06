@@ -1,4 +1,5 @@
 import ProjectItem from "./ProjectItem/ProjectItem";
+import { projectItemMetadata } from "../../utils/projectLib"
 import "./Projects.scss"
 
 const Projects = ({ }) => {
@@ -8,7 +9,13 @@ const Projects = ({ }) => {
                 <div className="header-selected-category-text">All</div>
                 <div className="header-projects-text">Projects</div>
             </div>
-            <ProjectItem />
+            <div className="projects-items-body-container">
+                {
+                    projectItemMetadata.map((project, i) => {
+                        return <ProjectItem projectMetadata={project} key={i} />
+                    })
+                }
+            </div>
         </div>
     )
 }
