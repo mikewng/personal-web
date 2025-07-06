@@ -1,7 +1,13 @@
-const ProjectItem = ({}) => {
+import "./ProjectItem.scss"
+
+const ProjectItem = ({ projectMetadata }) => {
+    console.log("what is the prjoc3 mteata", projectMetadata)
     return (
         <div className="project-item-container">
-            Project Item
+            <div className="project-item-name">{projectMetadata?.Name}</div>
+            <div className="project-item-data">{projectMetadata?.Date}</div>
+            <img className="project-item-img" src={projectMetadata?.Image?.src} />
+            <div className="project-item-desc">{projectMetadata?.Description}</div>
         </div>
     )
 }

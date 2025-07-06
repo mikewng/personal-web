@@ -5,17 +5,19 @@
     align-items: center;
     position: relative;
 
-    height: 45rem;
+    height: 100%;
+    max-height: 40rem;
     width: 30rem;
     transition: 0.35s;
 
     background: linear-gradient(rgba(228, 185, 201, 0.521));
-    margin-top: 5rem;
+    margin-top: 2vh;
 
     &.expand {
         width: 97vw;
         height: 95vh;
-        margin-top: 2rem;
+        margin-top: 0.5vh;
+        max-height: none;
 
 
         .env-header-container {

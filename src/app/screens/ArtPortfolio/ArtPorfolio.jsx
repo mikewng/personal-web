@@ -14,7 +14,7 @@ const ImageGalleryComponent = lazy(() => import("./ImageComponent/ImageGalleryCo
 const ArtPortfolio = () => {
 
     const [isLoadingPictures, setIsLoadingPictures] = useState(true)
-    
+
 
     // Add isPinned field to Pictures
 
@@ -39,7 +39,7 @@ const ArtPortfolio = () => {
                         <div className="art-gallery-loading-content">Loading...</div>
                     </div>
             }
-            
+
             {/* {
                 imgTestArray.map((img, i) => {
                     return (
