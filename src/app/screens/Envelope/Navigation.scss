@@ -89,6 +89,17 @@
 
 }
 
+@media (max-width: 768px) {
+    .env-nav-container.sub-nav {
+        width: 100%;
+        overflow: hidden;
+
+        .env-imageicon-container {
+            margin-left: 1rem;
+        }
+    }
+} 
+
 .env-nav-container.sub-nav {
     justify-content: start;
 
