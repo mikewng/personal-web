@@ -38,17 +38,17 @@ const ArtPortfolio = () => {
             {
                 !isLoadingPictures ? imgTestArray.map((img, i) => {
                     return (
-                        <ImageGalleryComponent imageSource={img} key={i} onSelect={handleOnImgSelect}/>
+                        <ImageGalleryComponent imageSource={img} key={i} onSelect={handleOnImgSelect} />
                     )
                 }) :
                     <div className="art-gallery-loading-container">
                         <div className="art-gallery-loading-content">Loading...</div>
                     </div>
             }
-            <ImageViewer 
-            isDisplaying={displayedImage} 
-            image={displayedImage}
-            onClose={() => {setDisplayedImage(null)}}
+            <ImageViewer
+                isDisplaying={displayedImage}
+                image={displayedImage}
+                onClose={() => { setDisplayedImage(null) }}
             />
         </div>
     )

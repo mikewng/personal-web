@@ -2,7 +2,7 @@ import "./ImageViewer.scss"
 
 const ImageViewer = ({ image, isDisplaying, onClose }) => {
     return (
-        isDisplaying && 
+        isDisplaying &&
         <div className="img-viewer-container">
             <div className="img-viewer-modal-container">
                 <img className="img-viewer-img" src={image?.src} />
