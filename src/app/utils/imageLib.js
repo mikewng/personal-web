@@ -12,6 +12,8 @@ import miku from "../assets/gallery-imgs/miku.png"
 import stilllife from "../assets/gallery-imgs/stilllife_1.png"
 import milia from "../assets/gallery-imgs/22_9_10.png"
 import p from "../assets/gallery-imgs/24_8_24.png"
+import elena from "../assets/gallery-imgs/a_7_12_23.png"
+import don from "../assets/gallery-imgs/d2.png"
 
 export const imgTestArray = [
     hutao,
@@ -27,22 +29,7 @@ export const imgTestArray = [
     miku,
     stilllife,
     milia,
-    p
+    p,
+    elena,
+    don
 ]
-
-// export const imgTestArray = [
-//     img2,
-//     img2,
-//     img,
-//     img2,
-//     img2,
-//     img3,
-//     img3,
-//     img2,
-//     img3,
-//     img,
-//     img2,
-//     img3,
-//     img,
-//     img2,
-// ]

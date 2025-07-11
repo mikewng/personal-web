@@ -7,6 +7,7 @@ import "./ArtPortfolio.scss"
 import "./ImageComponent/ImageGalleryComponent.scss"
 
 import { imgTestArray } from "../../utils/imageLib";
+import ImageViewer from "./ImageViewer/ImageViewer";
 
 const ImageGalleryComponent = lazy(() => import("./ImageComponent/ImageGalleryComponent"))
 
@@ -14,6 +15,7 @@ const ImageGalleryComponent = lazy(() => import("./ImageComponent/ImageGalleryCo
 const ArtPortfolio = () => {
 
     const [isLoadingPictures, setIsLoadingPictures] = useState(true)
+    const [displayedImage, setDisplayedImage] = useState(null)
 
 
     // Add isPinned field to Pictures
@@ -26,38 +28,28 @@ const ArtPortfolio = () => {
         return () => clearTimeout(timer);
     }, []);
 
+    const handleOnImgSelect = (image) => {
+        setDisplayedImage(image)
+    }
+
 
     return (
         <div className="art-gallery-container">
             {
                 !isLoadingPictures ? imgTestArray.map((img, i) => {
                     return (
-                        <ImageGalleryComponent imageSource={img} key={i} />
+                        <ImageGalleryComponent imageSource={img} key={i} onSelect={handleOnImgSelect} />
                     )
                 }) :
                     <div className="art-gallery-loading-container">
                         <div className="art-gallery-loading-content">Loading...</div>
                     </div>
             }
-
-            {/* {
-                imgTestArray.map((img, i) => {
-                    return (
-                        <Suspense 
-                            fallback={
-                                <div 
-                                    className="img-content-container loading" 
-                                >
-                                    Loading...
-                                </div>
-                            } 
-                            key={i}
-                        >
-                            <ImageGalleryComponent imageSource={img}  />
-                        </Suspense>
-                    )
-                })
-            } */}
+            <ImageViewer
+                isDisplaying={displayedImage}
+                image={displayedImage}
+                onClose={() => { setDisplayedImage(null) }}
+            />
         </div>
     )
 }
