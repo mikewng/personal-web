@@ -2,18 +2,21 @@
 
 :root {
     --background-color: rgb(228, 185, 201);
-    --body-color: rgb(114, 85, 104);
+    --header-color: rgb(252, 240, 248);
+    --body-color: rgb(255, 238, 249);
     --border-color: rgb(114, 105, 103);
     --hover-color: rgb(212, 190, 190);
+    --primary-text-color: rgb(52, 70, 114);
 }
 
 
 body {
     display: flex;
     justify-content: center;
-    background: linear-gradient(rgb(230, 230, 230), rgb(228, 185, 201));
+    background: linear-gradient(rgb(249, 215, 223), rgb(216, 147, 172));
     height: 100vh;
     overflow-y: hidden;
+    color: var(--primary-text-color);
 
     // background-color: var(--background-color);
 

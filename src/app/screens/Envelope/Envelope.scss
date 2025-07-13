@@ -16,7 +16,6 @@
     &.expand {
         width: 97vw;
         height: 95vh;
-        margin-top: 0.5vh;
         max-height: none;
 
 
@@ -24,9 +23,8 @@
             min-height: 5rem;
             max-height: 5rem;
             border-bottom: 2px solid var(--border-color);
-            background-color: rgb(159, 140, 153);
+            background-color: var(--header-color);
             border-radius: 0.35rem 0.35rem 0rem 0rem;
-
         }
     }
 

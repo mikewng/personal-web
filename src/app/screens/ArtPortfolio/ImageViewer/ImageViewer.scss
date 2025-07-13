@@ -1,5 +1,22 @@
 .img-viewer-container {
     position: fixed;
+    top: 0%;
+    left: 50%;
+    width: 0rem;
+
+    .img-viewer-modal-container {
+        position: absolute;
+        width: 0%;
+        height: 90%;
+    }
+
+    .img-viewer-close {
+        display: none;
+    }
+}
+
+.img-viewer-container.displaying {
+    position: fixed;
     z-index: 1000;
     top: 0;
     left: 0;
@@ -23,6 +40,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        transition: 0.5s;
     }
 
     .img-viewer-img {
@@ -39,6 +58,7 @@
         position: absolute;
         right: 0;
         top: 0;
+        font-size: 2rem;
 
         &:hover {
             cursor: pointer;
