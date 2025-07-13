@@ -11,22 +11,22 @@
     transition: 0.35s;
 
     background: linear-gradient(rgba(228, 185, 201, 0.521));
-    margin-top: 2vh;
+    margin-top: 10vh;
 
     &.expand {
         width: 97vw;
         height: 95vh;
-        margin-top: 0.5vh;
         max-height: none;
+        margin-top: 0%;
+        top: 0%;
 
 
         .env-header-container {
             min-height: 5rem;
             max-height: 5rem;
             border-bottom: 2px solid var(--border-color);
-            background-color: rgb(159, 140, 153);
+            background-color: var(--header-color);
             border-radius: 0.35rem 0.35rem 0rem 0rem;
-
         }
     }
 

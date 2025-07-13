@@ -19,9 +19,10 @@
         cursor: pointer;
 
         .img-content-image {
-            transform: scale(101%);
+            transform: scale(102%);
             opacity: 80%;
             transition: 0.5s;
+            border: 0.25rem;
         }
     }
 
