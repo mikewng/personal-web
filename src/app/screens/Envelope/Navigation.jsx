@@ -1,4 +1,4 @@
-import Socials from "./SectionComponents/Socials";
+import Socials from "./components/Socials";
 import "./Navigation.scss"
 import { useNavigationContext } from "../../context/useNavigationContext";
 

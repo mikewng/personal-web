@@ -20,12 +20,13 @@ body {
     align-items: center;
     margin: unset;
 
-    // background-color: var(--background-color);
-
     font-family: 'Raleway', sans-serif;
-
 }
 
 .web-core-screen-container {
     border-radius: 0.80rem;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
