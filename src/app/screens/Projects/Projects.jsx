@@ -10,11 +10,13 @@ const Projects = ({ }) => {
                 <div className="header-projects-text">Projects</div>
             </div>
             <div className="projects-items-body-container">
-                {
-                    projectItemMetadata.map((project, i) => {
-                        return <ProjectItem projectMetadata={project} key={i} />
-                    })
-                }
+                <div className="projects-items-carousel">
+                    {
+                        projectItemMetadata.map((project, i) => {
+                            return <ProjectItem projectMetadata={project} key={i} />
+                        })
+                    }
+                </div>
             </div>
         </div>
     )
