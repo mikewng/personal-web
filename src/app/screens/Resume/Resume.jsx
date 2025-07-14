@@ -10,8 +10,8 @@ const Resume = () => {
             </div>
             <div className="resume-skills-section">
                 {
-                    resumeSkillsData.map((skill) => {
-                        return <ResumeSkill skillMetadata={skill}/>
+                    resumeSkillsData.map((skill, i) => {
+                        return <ResumeSkill skillMetadata={skill} key={i}/>
                     })
                 }
             </div>

@@ -1,7 +1,6 @@
 import "./ProjectItem.scss"
 
 const ProjectItem = ({ projectMetadata }) => {
-    console.log("what is the prjoc3 mteata", projectMetadata)
     return (
         <div className="project-item-container">
             <div className="project-item-name">{projectMetadata?.Name}</div>
