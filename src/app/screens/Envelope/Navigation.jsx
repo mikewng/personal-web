@@ -26,7 +26,10 @@ const Navigation = () => {
                 <div className="env-link-container resume" onClick={() => { setNavState("Resume") }}>
                     Resume
                 </div>
-                <Socials />
+                {
+                    navState === "Home" &&
+                    <Socials />
+                }
             </div>
         </div>
     )
