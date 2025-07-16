@@ -17,13 +17,13 @@ const Navigation = () => {
                 }
             </div>
             <div className="env-all-links-container">
-                <div className="env-link-container portfolio" onClick={() => { setNavState("Portfolio") }}>
+                <div className={"env-link-container portfolio" + (navState === "Portfolio" ? " active" : "")} onClick={() => { setNavState("Portfolio") }}>
                     Art Portfolio
                 </div>
-                <div className="env-link-container projects" onClick={() => { setNavState("Projects") }}>
+                <div className={"env-link-container projects" + (navState === "Projects" ? " active" : "")} onClick={() => { setNavState("Projects") }}>
                     Projects
                 </div>
-                <div className="env-link-container resume" onClick={() => { setNavState("Resume") }}>
+                <div className={"env-link-container resume" + (navState === "Resume" ? " active" : "")} onClick={() => { setNavState("Resume") }}>
                     Resume
                 </div>
                 {
