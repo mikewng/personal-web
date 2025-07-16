@@ -64,3 +64,11 @@
     }
 
 }
+
+@media (max-width: 768px) {
+    .env-container {
+        max-height: unset;
+        width: 100%;
+        max-width: unset;
+    }
+}
