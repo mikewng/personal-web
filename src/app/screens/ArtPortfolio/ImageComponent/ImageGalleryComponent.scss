@@ -6,6 +6,8 @@
     border-radius: 0.25rem;
     animation: fadeIn 1.25s ease forwards;
 
+    position: relative;
+
     .img-content-image {
         display: block;
         width: 100%;
@@ -19,18 +21,17 @@
         cursor: pointer;
 
         .img-content-image {
-            transform: scale(102%);
             opacity: 80%;
             transition: 0.5s;
             border: 0.25rem;
         }
     }
 
-    &.loading {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 8rem 4rem 8rem 4rem;
+
+    .img-content-loading {
+        position: absolute;
+        top: 50%;
+        right: 40%;
     }
 }
 
