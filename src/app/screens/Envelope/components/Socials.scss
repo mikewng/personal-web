@@ -14,17 +14,22 @@
         .socials-icon {
             background-position: center;
             background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100%;
 
-            &.instagram {
-                width: 2rem;
-                height: 2rem;
-                background-image: url('../../../assets/icons/instagram-brands-solid.svg')
+            &:hover {
+                cursor: pointer;
+                color: rgb(127, 120, 120);
+                transition: 0.75s;
             }
 
-            &.x {
-                width: 2rem;
-                height: 2rem;
-                background-image: url('../../../assets/icons/X2_logo_2023.svg');
+            svg {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 100%;
             }
         }
     }
