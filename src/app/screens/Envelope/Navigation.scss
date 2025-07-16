@@ -143,6 +143,10 @@
                 transform: translateY(-5%);
                 transition: 0.75s;
             }
+
+            &.active {
+                color: rgb(95, 74, 74);
+            }
         }
     }
 
