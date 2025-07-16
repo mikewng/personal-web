@@ -3,4 +3,29 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    .resume-download-link-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        position: sticky;
+        top: 0;
+
+        border-bottom: 2px solid var(--border-color);
+        padding: 2rem;
+        width: 100%;
+
+        font-size: 1.5rem;
+        font-weight: 450;
+
+        background-color: var(--hover-color);
+    }
+
+    .resume-skills-section {
+        display: flex;
+        flex-direction: column;
+        height: 100rem;
+    }
 }

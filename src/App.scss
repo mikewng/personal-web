@@ -17,13 +17,16 @@ body {
     height: 100vh;
     overflow-y: hidden;
     color: var(--primary-text-color);
-
-    // background-color: var(--background-color);
+    align-items: center;
+    margin: unset;
 
     font-family: 'Raleway', sans-serif;
-
 }
 
 .web-core-screen-container {
     border-radius: 0.80rem;
+}
+
+::-webkit-scrollbar {
+    // display: none;
 }
