@@ -1,10 +1,10 @@
 'use client'
 
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState } from "react";
 
 export const NavContext = createContext(null);
 
-export const NavigationProvider = ({children}) => {
+export const NavigationProvider = ({ children }) => {
     const [navState, setNavState] = useState("Home")
 
     return (
@@ -18,5 +18,5 @@ export const NavigationProvider = ({children}) => {
 }
 
 export function useNavigationContext() {
-  return useContext(NavContext);
+    return useContext(NavContext);
 }

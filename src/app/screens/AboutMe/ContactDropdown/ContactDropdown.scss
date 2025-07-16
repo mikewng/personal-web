@@ -11,15 +11,38 @@
         border-radius: 0.35rem;
 
         font-size: 1.2rem;
-        font-weight: 500;
+        position: relative;
 
-        &:hover {
+        &:hover,
+        &.selected {
             cursor: pointer;
             color: rgb(70, 61, 61);
             background-color: rgb(189, 183, 182);
             transform: translateY(-3%);
             box-shadow: 0px 3px 0px 0px rgba(79, 79, 79, 0.662);
             transition: 0.3s;
+        }
+
+        .about-me-contact-list-container {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            top: 100%;
+            left: 0;
+
+            opacity: 0%;
+            transition: 0.25s;
+
+            width: 100%;
+
+            .cl-item {
+                padding: 1rem;
+                border: 1px solid black;
+            }
+
+            &.active {
+                opacity: 100%;
+            }
         }
     }
 }
