@@ -11,11 +11,12 @@ const Projects = ({ }) => {
             </div>
             <div className="projects-items-body-container">
                 <div className="projects-items-carousel">
-                    {
+                    No Projects Currently.
+                    {/* {
                         projectItemMetadata.map((project, i) => {
                             return <ProjectItem projectMetadata={project} key={i} />
                         })
-                    }
+                    } */}
                 </div>
             </div>
         </div>
