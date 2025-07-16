@@ -10,7 +10,7 @@
     width: 30rem;
     transition: 0.35s;
 
-    background: linear-gradient(rgba(228, 185, 201, 0.521));
+    background: linear-gradient(rgb(226, 172, 192), rgb(189, 179, 219));
 
     &.expand {
         width: 100%;
@@ -25,7 +25,8 @@
             min-height: 5rem;
             max-height: 5rem;
             border-bottom: 2px solid var(--border-color);
-            background-color: var(--header-color);
+            background: linear-gradient(0.25turn, rgb(223, 142, 171), rgb(164, 148, 213));
+
         }
     }
 
