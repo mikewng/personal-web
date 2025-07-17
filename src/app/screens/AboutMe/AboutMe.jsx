@@ -31,9 +31,16 @@ const AboutMe = ({ }) => {
                 <div className="about-me-body-container">
                     <div className="am-line">I'm a computer science graduate from Georgia Institute of Technology.</div>
                     <div className="am-line">I am proficient in both frontend and backend code for web applications, and I have an interest in AI architecture.</div>
-                    <div className="am-line">I am also an artist (against the use of AI art) who likes to draw characters from games and shows I like.</div>
+                    <div className="am-line">I am also an artist who likes to draw characters from games and shows I like.</div>
+                    <div className="am-line">
+                        {`I can speak`}
+                        <div>English</div>
+                        <div>中文</div>
+                        <div>日本語</div>
+                        <div>!</div>
+                    </div>
                 </div>
-                <ContactDropdown />
+                {/* <ContactDropdown /> */}
             </div>
         </div>
     )
