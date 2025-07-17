@@ -20,7 +20,7 @@ const AboutMe = ({ }) => {
     return (
         <div className="about-me-container">
             <div className="about-me-picture-container">
-                <img className="about-me-image" src={aboutMePic?.src} />
+                {/* <img className="about-me-image" src={aboutMePic?.src} /> */}
             </div>
             <div className="about-me-content-container">
                 <div className="about-me-header-container">
@@ -40,8 +40,8 @@ const AboutMe = ({ }) => {
                         <div>!</div>
                     </div>
                 </div>
-                {/* <ContactDropdown /> */}
             </div>
+            <ContactDropdown />
         </div>
     )
 }
