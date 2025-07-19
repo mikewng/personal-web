@@ -3,10 +3,14 @@ import "./AboutMe.scss"
 import useInterval from "@/app/assets/hooks/useInterval"
 import ContactDropdown from "./ContactDropdown/ContactDropdown"
 import aboutMePic from "../../assets/gallery-imgs/a_3_28_25_1.png"
+import { biographyLanguage } from "./library/languageLib"
+
+import LanguageSelector from "./ContactDropdown/LanguageSelector"
 
 const AboutMe = ({ }) => {
     const aliases = ["Mike Wang", "Zhixuan Wang"]
 
+    const [selectedLanguage, setSelectedLanguage] = useState("en")
     const [currName, setCurrName] = useState(0)
 
     useInterval(() => {
@@ -25,23 +29,25 @@ const AboutMe = ({ }) => {
             <div className="about-me-content-container">
                 <div className="about-me-header-container">
                     <div className="header-text-static">Hello, my name is</div>
-                    <div className="header-text-dynamic">{aliases[currName]}</div>
+                    <div className="header-text-dynamic">
+                        {aliases[currName]}
+                    </div>
                     <div className="header-text-static">!</div>
                 </div>
                 <div className="about-me-body-container">
-                    <div className="am-line">I'm a computer science graduate from Georgia Institute of Technology.</div>
-                    <div className="am-line">I am proficient in both frontend and backend code for web applications, and I have an interest in AI architecture.</div>
-                    <div className="am-line">I am also an artist who likes to draw characters from games and shows I like.</div>
-                    <div className="am-line">
-                        {`I can speak`}
-                        <div>English</div>
-                        <div>中文</div>
-                        <div>日本語</div>
-                        <div>!</div>
-                    </div>
+                    {
+                        biographyLanguage[selectedLanguage].map((x, i) => {
+                            return (
+                                <div className="am-line" key={i}>{x}</div>
+                            )
+                        })
+                    }
+                </div>
+                <div className="about-me-footer-container">
+                    <LanguageSelector />
                 </div>
             </div>
-            <ContactDropdown />
+            {/* <ContactDropdown /> */}
         </div>
     )
 }

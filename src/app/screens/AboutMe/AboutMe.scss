@@ -40,6 +40,19 @@
 
         .about-me-body-container {
             font-size: 1.5rem;
+
+
+            .am-line {
+                &.multiple-fade {
+                    display: flex;
+                    gap: 0.3rem;
+                    align-items: center;
+                }
+            }
+        }
+
+        .about-me-footer-container {
+            font-size: 1.5rem;
         }
     }
 }
