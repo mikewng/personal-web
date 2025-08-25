@@ -10,8 +10,8 @@
 
             &:hover {
                 cursor: pointer;
-                color: rgb(212, 190, 190);
-                transition: 1s;
+                color: rgb(187, 74, 74);
+                transition: 0.5s;
             }
         }
     }
@@ -47,7 +47,7 @@
         top: 15%;
         border: 2px solid var(--border-color);
         padding: 4rem;
-        border-radius: 1.5rem;
+        border-radius: 1rem;
 
         background-color: white;
 

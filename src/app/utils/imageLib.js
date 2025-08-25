@@ -14,8 +14,12 @@ import milia from "../assets/gallery-imgs/22_9_10.png"
 import p from "../assets/gallery-imgs/24_8_24.png"
 import elena from "../assets/gallery-imgs/a_7_12_23.png"
 import don from "../assets/gallery-imgs/d2.png"
+import sancho from "../assets/gallery-imgs/D_28.png"
+import castorice from "../assets/gallery-imgs/D27_1.png"
+import yixuan from "../assets/gallery-imgs/D_23_2.png"
 
 export const imgTestArray = [
+    sancho,
     hutao,
     oc,
     violet,
@@ -24,10 +28,12 @@ export const imgTestArray = [
     angela,
     ocpink,
     outis,
+    yixuan,
     o3,
     cap,
     miku,
     stilllife,
+    castorice,
     milia,
     p,
     elena,
